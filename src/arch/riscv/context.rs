@@ -52,6 +52,11 @@ pub struct TrapFrame {
     pub sstatus: usize,
     /// 浮点数寄存器
     pub fs: [usize; 2],
+    /// Context type
+    /// 0: trap context from supervisor mode
+    /// 1: trap context from user mode
+    /// 2: thread context in supervisor mode
+    pub ctx_type: usize,
 }
 
 impl TrapFrame {
