@@ -57,6 +57,8 @@ pub struct TrapFrame {
     /// 1: trap context from user mode
     /// 2: thread context in supervisor mode
     pub ctx_type: usize,
+    /// The previous task context pointer
+    pub prev_ctx_ptr: usize,
 }
 
 impl TrapFrame {
