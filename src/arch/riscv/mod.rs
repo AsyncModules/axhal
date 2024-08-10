@@ -110,3 +110,12 @@ pub unsafe fn write_thread_pointer(tp: usize) {
 include_asm_marcos!();
 
 core::arch::global_asm!(include_str!("signal.S"));
+
+/// Get current stack pointer
+pub fn get_sp() -> usize {
+    let sp: usize;
+    unsafe {
+        core::arch::asm!("mv {}, sp", out(reg) sp);
+    }
+    sp
+}
