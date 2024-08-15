@@ -45,6 +45,7 @@ pub mod arch;
 pub mod cpu;
 pub mod mem;
 pub mod time;
+pub mod cycle;
 
 #[cfg(feature = "tls")]
 pub mod tls;

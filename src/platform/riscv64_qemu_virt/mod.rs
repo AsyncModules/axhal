@@ -2,6 +2,7 @@ pub mod console;
 pub mod mem;
 pub mod misc;
 pub mod time;
+pub mod cycle;
 
 #[cfg(feature = "irq")]
 pub mod irq;

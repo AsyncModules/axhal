@@ -96,3 +96,13 @@ pub fn set_tss_stack_top(_kernel_stack_top: memory_addr::VirtAddr) {}
 pub fn platform_name() -> &'static str {
     "dummy"
 }
+
+pub mod cycle {
+    pub fn cycle64() -> u64 {
+        unimplemented!()
+    }
+    
+    pub fn cycle() -> usize {
+        unimplemented!()
+    }
+}
